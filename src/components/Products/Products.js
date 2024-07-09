@@ -10,7 +10,7 @@ function Products() {
   
 
   useEffect(() => {
-    fetchProducts('iphone').then((response) => {
+    fetchProducts('xiaomi').then((response) => {
       setProducts(response);
       setLoading(false);
     });
