@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
-import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
@@ -30,9 +29,9 @@ const Signin = () => {
   };
 
   return (
-    <C.Container>
-      <C.Label>SISTEMA DE LOGIN</C.Label>
-      <C.Content>
+    <div className="flex items-center justify-center flex-col gap-3 h-[100vh] bg-yellow-300">
+      <label className="text-lg font-semibold text-[#676767]">SISTEMA DE LOGIN</label>
+      <div className="flex items-center justify-center flex-col gap-4 w-full shadow-sm bg-white max-w-[350px] p-5 rounded-md">
         <Input
           type="email"
           placeholder="Digite seu E-mail"
@@ -45,16 +44,16 @@ const Signin = () => {
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
         />
-        <C.labelError>{error}</C.labelError>
+        <label className="text-sm text-red-500">{error}</label>
         <Button Text="Entrar" onClick={handleLogin} />
-        <C.LabelSignup>
+        <label className="text-[16px] text-[#676767]">
           Não tem uma conta?
-          <C.Strong>
-            <Link to="/signup">&nbsp;Registre-se</Link>
-          </C.Strong>
-        </C.LabelSignup>
-      </C.Content>
-    </C.Container>
+          <strong className="cursor-pointer">
+            <Link className="text-[#676767]" to="/signup">&nbsp;Registre-se</Link>
+          </strong>
+        </label>
+      </div>
+    </div>
   );
 };
 
