@@ -1,0 +1,45 @@
+.formaPgto {
+	width: 500px;
+	height: 5px;
+	display: flex;
+    flex-direction: column;
+    background-color: #FFC7C8;
+}
+
+.box {
+	width: 150px;
+	height: 50px;
+	display: flex;
+    flex-direction: column;
+}
+
+
+.title {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title-item-grande {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.title-item-pequeno {
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.topo {
+    margin-top: 20;
+}
+
+.paragrafo {
+    max-width: 480px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: auto;
+}
